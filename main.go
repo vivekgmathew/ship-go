@@ -15,7 +15,7 @@ func main() {
 
 	mux.HandleFunc("/hello",
 		func(w http.ResponseWriter, r *http.Request) {
-			❷
+
 			enc := json.NewEncoder(w)
 			w.Header().
 				Set("Content-Type",
@@ -36,3 +36,5 @@ type Resp struct {
 	Language    string `json:"language"`
 	Translation string `json:"translation"`
 }
+
+
